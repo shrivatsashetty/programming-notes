@@ -65,5 +65,15 @@ git push origin feature1 --force
 ```
 From above, the remote repository (i.e. origin) will be updated to reflect the updated commit message.
 
+## **Adding and editing remote origins**
 
+To add a remote origin to your git repo use the follwing command
+```sh
+git remote add origin <remote-url>
+```
+
+To reset the remote url
+```sh
+git remote set-url origin <new-remote-url>
+```
 

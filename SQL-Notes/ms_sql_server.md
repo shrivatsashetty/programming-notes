@@ -4,8 +4,6 @@
 - [SQLShack](https://www.sqlshack.com/sql-server-training/)
 - [PopSQL](https://popsql.com/learn-sql)
 
-Yes, you're absolutely right! Microsoft SQL Server follows **T-SQL (Transact-SQL)**, which is an extension of the standard SQL (Structured Query Language).  
-
 ### **What is T-SQL?**  
 **T-SQL (Transact-SQL)** is Microsoft's proprietary extension of SQL that provides additional features beyond standard SQL. It includes:  
 1. **Procedural Programming Features**:  
@@ -56,8 +54,6 @@ SELECT name, age
 FROM Employees 
 WHERE age > @AgeLimit;
 ```
-
-Would you like any specific examples or explanations related to your work? 😊
 
 ## **Query to check if a particular columng exists in a given table**
 ```sql
