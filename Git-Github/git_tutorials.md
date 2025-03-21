@@ -13,6 +13,33 @@ git branch -a
 ```
 This command lists all branches stored on the remote, prefixed by the remote name (e.g: `origin/feature-branch`).
 
+## **Creating a new branch**
+
+1. To create a new local branch, use the following command:
+```bash
+# syntax
+git checkout -b <branch-name>
+# example
+git checkout -b feature1
+```
+
+2. To create the copy of the branch in the remote repository:
+```bash
+# syntax
+git push <remote-name> <branch-name>
+# example
+git push origin feature1 
+```
+
+3. Or to set an upstream branch, so that a subsequent git pull will know what to do, you might instead want to use:
+```bash
+# syntax
+git push --set-upstream <remote-name> <local-branch-name> 
+# example
+git push --set-upstream origin feature1
+```
+The above command creates a remote tracking branch
+
 ## **Pull changes from a remote branch**
 
 1. Checkout to the feature branch into which you want to pull and merge the latest changes.
