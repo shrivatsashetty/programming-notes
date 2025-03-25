@@ -43,39 +43,12 @@ Or do you prefer learn from [youtube] ?
 [youtube]: https://www.youtube.com
 
 ## Images
+The first image style is called an inline image link. To create an inline image link, enter an exclamation point (`!`), wrap the alt text in brackets (`[ ]`), and then wrap the link in parentheses (`( )`) as follows: <br>
+![A pretty tiger](https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg)
 
-## Embedding files in markdown
-Markdown itself does not natively support embedding PDFs like it does with images. However, you can achieve similar functionality using different methods depending on where you are rendering the Markdown.
+The images can be referenced usigng a hyperlink or may be coming from a file in your computer in which case you need to specify the absolute path of the image file in your computer or an relative path relative to the markdown file:<br>
+![Orange Cat](./Assets/Images/orange_cat.png)
 
-### **1. Using an HTML `<iframe>` (Works in some Markdown renderers)**
-```markdown
-<iframe src="your-file.pdf" width="100%" height="600px"></iframe>
-```
-This works in environments that support HTML inside Markdown, such as GitHub Pages, some wikis, or web-based Markdown renderers.
+For a reference image, you'll follow the same pattern as a reference link. You'll precede the Markdown with an exclamation point, then provide two brackets for the alt text, and then two more for the image tag, as follows: [Black cat][Black]
 
----
-
-### **2. Linking to the PDF (Universal)**
-If embedding is not possible, you can provide a direct link to the PDF:
-```markdown
-[View PDF](your-file.pdf)
-```
-Clicking the link will open the PDF in the browser.
-
----
-
-### **3. Using PDF.js (For Web-based Markdown)**
-If you're working in a web-based environment, you can use Mozilla's PDF.js to embed the PDF:
-```markdown
-<iframe src="https://mozilla.github.io/pdf.js/web/viewer.html?file=your-file.pdf" width="100%" height="600px"></iframe>
-```
-Replace `your-file.pdf` with the actual file path.
-
----
-
-### **4. Embedding in Jupyter Notebook (For Markdown in Jupyter)**
-If you're using Markdown inside a Jupyter Notebook, you can use IPython’s display utilities:
-```python
-from IPython.display import IFrame
-IFrame("your-file.pdf", width=600, height=300)
-```
+[Black]: https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg
