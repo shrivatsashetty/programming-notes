@@ -55,6 +55,15 @@ FROM Employees
 WHERE age > @AgeLimit;
 ```
 
+## **Query to check if a particular table exists in the Database**
+```sql
+IF EXISTS(
+	SELECT * FROM INFORMATION_SCHEMA. TABLES
+	WHERE TABLE_NAME = 'DOC_Document_Folder_Contents'
+	)
+	SELECT 'found' AS search_result ELSE SELECT 'not found' AS search_result;
+```
+
 ## **Query to check if a particular columng exists in a given table**
 ```sql
 -- query to check if a coulumn exists in a specified table

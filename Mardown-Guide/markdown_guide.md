@@ -52,3 +52,20 @@ The images can be referenced usigng a hyperlink or may be coming from a file in 
 For a reference image, you'll follow the same pattern as a reference link. You'll precede the Markdown with an exclamation point, then provide two brackets for the alt text, and then two more for the image tag, as follows: [Black cat][Black]
 
 [Black]: https://upload.wikimedia.org/wikipedia/commons/a/a3/81_INF_DIV_SSI.jpg
+
+## Blockquotes
+A blockquote is a sentence or paragraph that's been specially formatted to draw attention to the reader. To create a block quote, all you have to do is preface a line with the "greater than" caret (`>`). For example:
+> "The sin of doing nothing is the deadliest of all the seven sins. It has been said that for evil men to accomplish their purpose it is only necessary that good men should do nothing."
+
+You can also place a caret character on each line of the quote. This is particularly useful if your quote spans multiple paragraphs. For example:
+> His words seemed to have struck some deep chord in his own nature. Had he spoken
+  of himself, of himself as he was or wished to be? Stephen watched his face for some
+  moments in silence. A cold sadness was there. He had spoken of himself, of his own
+  loneliness which he feared.
+>
+> —Of whom are you speaking? Stephen asked at length.
+>
+> Cranly did not answer.
+
+Block quotes can contain other Markdown elements, such as italics, images, or links.
+>There were four French delegates in a brake and one, a plump smiling young man, held, wedged on a stick, a card on which were printed the words: _VIVE L'IRLANDE_!
