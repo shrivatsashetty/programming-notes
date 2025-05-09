@@ -4,8 +4,8 @@
 - [SQLShack](https://www.sqlshack.com/sql-server-training/)
 - [PopSQL](https://popsql.com/learn-sql)
 
-### **What is T-SQL?**  
-**T-SQL (Transact-SQL)** is Microsoft's proprietary extension of SQL that provides additional features beyond standard SQL. It includes:  
+### **What is T-SQL?**
+**T-SQL (Transact-SQL)** is Microsoft's proprietary extension of SQL that provides additional features beyond standard SQL. It includes: 
 1. **Procedural Programming Features**:  
    - Variables (`DECLARE`, `SET`)  
    - Conditional statements (`IF...ELSE`)  
