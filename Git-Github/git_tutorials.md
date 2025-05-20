@@ -16,29 +16,32 @@ This command lists all branches stored on the remote, prefixed by the remote nam
 ## **Creating a new branch**
 
 1. To create a new local branch, use the following command:
-```bash
-# syntax
-git checkout -b <branch-name>
-# example
-git checkout -b feature1
-```
+
+    ```bash
+    # syntax
+    git checkout -b <branch-name>
+    # example
+    git checkout -b feature1
+    ```
 
 2. To create the copy of the branch in the remote repository:
-```bash
-# syntax
-git push <remote-name> <branch-name>
-# example
-git push origin feature1 
-```
+
+    ```bash
+    # syntax
+    git push <remote-name> <branch-name>
+    # example
+    git push origin feature1 
+    ```
 
 3. Or to set an upstream branch, so that a subsequent git pull will know what to do, you might instead want to use:
-```bash
-# syntax
-git push --set-upstream <remote-name> <local-branch-name> 
-# example
-git push --set-upstream origin feature1
-```
-The above command creates a remote tracking branch
+
+    ```bash
+    # syntax
+    git push --set-upstream <remote-name> <local-branch-name> 
+    # example
+    git push --set-upstream origin feature1
+    ```
+    The above command creates a remote tracking branch
 
 ## **Pull changes from a remote branch**
 
@@ -103,4 +106,71 @@ To reset the remote url
 ```sh
 git remote set-url origin <new-remote-url>
 ```
+
+## **Navigating between git commits**
+
+### Move **back** to a previous commit:
+
+You can navigate to any particular commit using it's commit hash (the unique identifier of the commit). This way is called absolute referencing.
+
+```bash
+# get the commit hashes of all commmits
+git log --oneline --all --graph --decorate
+# navigate to a particular commit-hash
+git checkout <commit-hash>
+```
+
+This puts your working directory into a **detached HEAD** state at that commit.
+
+You can also use relative referencing like `HEAD~1` (1 commit before HEAD), `HEAD~2`, ..., `HEAD~n` etc.
+
+
+```bash
+git checkout HEAD~1
+```
+
+---
+
+### Using a Temporary branch:
+
+If you want to test code at a past commit and then come back, you can use a temporary branch:
+
+  ```bash
+  # checkout to a commit on a temporary branch
+  git checkout -b temp <commit-hash>
+  ```
+  The above command creates a new temporary branch. The state of the project will be as it was on the commit hash specified.
+
+  After testing the changes on the temporary branch you can navigate back to the latest commit on your main or feature branch you were workig on earlier using the below command:
+
+  ```bash
+  git checkout your-original-branch
+  ```
+
+
+---
+
+### Move **forward** (back to latest commit / branch):
+
+If you checked out a previous commit and now want to go back:
+
+```bash
+git checkout main
+# or the branch you were on, e.g.
+git checkout feature-branch
+```
+
+You can also use:
+
+```bash
+git checkout -
+```
+
+The above command switches you back to the **previous branch**.
+
+> [!NOTE]
+>
+> * The opposite of `~` (child) is `^` (parent). An example would be `git checkout HEAD^2` to move two commits fast forward from the current HEAD pointer. You can try it by yourself.
+>
+> * For detailed git log along with decorated git graph, use the following git command: `git log --oneline --all --graph --decorate`
 
